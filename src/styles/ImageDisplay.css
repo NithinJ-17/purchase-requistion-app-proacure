@@ -1,0 +1,28 @@
+/* src/styles/ImageDisplay.css */
+
+.image-display {
+    display: flex;
+    flex-wrap: nowrap; /* No wrapping, single row */
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 20px; /* Space between items */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    width: 100%;
+  }
+  
+  /* Individual Image Item */
+  .image-item {
+    flex: 0 0 auto; /* Prevents the item from shrinking or growing */
+    border: 1px solid #ddd; /* Border around each item */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    padding: 10px; /* Space inside each item */
+  }
+  
+  .image-thumbnail {
+    width: 150px; /* Set width for the images */
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Optional: Add rounded corners */
+  }
+  

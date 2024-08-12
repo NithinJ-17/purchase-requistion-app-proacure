@@ -1,0 +1,109 @@
+/* src/pages/FormPage.css */
+.form-page-container {
+  margin-left: 127px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top-center;
+  height: 130vh;
+  width: 100vw;
+  top: 0px;
+  padding: 20px;
+  background-color: #222222; /* Dark background */
+  color: rgba(255, 255, 255, 0.877); /* Light text color */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1250px;
+  background-color: #333333; /* Slightly lighter background for the form */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  border: 2px solid #555555; /* Border added */
+}
+
+label {
+  padding: 10px;
+  margin-bottom: 15px; /* Increased margin */
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.877);
+}
+
+/* Highlighted label text */
+label span {
+  font-size: 18px; /* Larger font size */
+  font-family: 'Arial', sans-serif; /* Simple, clean font */
+  font-weight: 600; /* Bold text */
+  padding-right: 15px; /* Space between label and input */
+  color: rgba(255, 255, 255, 0.877); /* Light text color */
+  border-bottom: 2px solid #f85c5c38; /* Bottom border for highlighting */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+  margin-bottom: 5px; /* Space below label text */
+}
+
+/* Style for required asterisks */
+.asterisk {
+  color: #f85c5c; /* Bright red color for visibility */
+  font-weight: bold;
+  margin-left: 5px; /* Space between text and asterisk */
+}
+
+input, select {
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #555555; /* Darker border */
+  font-size: 1em;
+  background-color: #444444; /* Darker background for inputs */
+  color: rgba(255, 255, 255, 0.877);
+}
+
+input.optional {
+  background-color: #555555; /* Slightly different background for optional fields */
+}
+
+/* Ensure no other conflicting styles */
+/* Button styles */
+button {
+  padding: 12px 20px; /* Shortened button width */
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.877) !important; /* Dark background color */
+  color: #f3f3f38c !important; /* Light text color */
+  cursor: pointer;
+  max-width: 200px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover styles */
+button:hover {
+  background-color: #333333 !important; /* Slightly darker background color */
+  color: #ffffff !important; /* Lighter text color */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.premium-message {
+  display: none;
+  padding: 8px; /* Shortened padding */
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  max-width: 300px; /* Shortened width */
+  text-align: center;
+}
+
+.premium-message.show {
+  display: block;
+}
+
+/* Adjust the form when the sidebar is collapsed */
+.sidebar.closed ~ .form-page-container {
+  margin-left: -50px;
+}

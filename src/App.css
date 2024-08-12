@@ -1,0 +1,126 @@
+/* src/App.css */
+
+/* App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Prevent overflow on the body */
+}
+
+.loading-spinner {
+  font-size: 24px;
+  color: rgb(133, 5, 5);
+  text-align: center;
+  margin: 20px;
+  z-index: -1;
+}
+.content {
+  top:0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+.sidebar.closed ~ .app .content {
+  margin-left: 250px;
+}
+
+.no-products {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin: 20px;
+  
+}
+/* Image Display Container */
+.image-display-container {
+  position: relative;
+  width: 100%; /* Make sure it takes the full width of the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  left: 230px;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0);
+  z-index: 1000;
+  transition: margin-left 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  border: 5px solid #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 1200px;
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.image-display-container:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Sidebar Adjustment */
+.sidebar.closed ~ .app .content {
+  margin-left: 250px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+/* src/styles/ImageDisplay.css */
+
+/* Image Display */
+.image-display {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next line */
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 20px; /* Space between items */
+  overflow-y: auto; /* Enable vertical scrolling within the display */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%;
+}
+
+/* Individual Image Item */
+.image-item {
+  flex: 0 0 22%; /* 4 items per row */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Image Thumbnail */
+.image-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+/* Product Details */
+.product-details {
+  color: black;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.product-details h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product-details p {
+  margin: 2px 0;
+  font-size: 12px;
+}
+.animated-header {
+  color:black;
+}

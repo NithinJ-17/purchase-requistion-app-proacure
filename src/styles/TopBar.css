@@ -1,0 +1,82 @@
+/* src/styles/TopBar.css */
+.topbar {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    margin-top: 50px;
+    margin-left: 475px;
+    width: calc(100% - 250px);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 1150px;
+    transition: margin-left 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.topbar:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.search-bar {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    flex-grow: 1;
+    max-width: 2000px;
+    background-color: #222222;
+    color: white;
+    font-size: 16px;
+}
+
+.search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 9px; /* Space between search bar and button */
+    font-size: 20px; /* Adjust icon size */
+}
+
+/* Styles for suggestions dropdown */
+.suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #444;
+    background: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+    background-color: #444;
+}
+
+/* Adjust margin-left when the sidebar is closed */
+.sidebar.closed ~ .topbar {
+    margin-left: 250px;
+}

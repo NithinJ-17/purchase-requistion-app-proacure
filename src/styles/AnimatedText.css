@@ -1,0 +1,25 @@
+/* src/styles/AnimatedText.css */
+
+.animated-text {
+    top:32.5px;
+    font-size: 100px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    left: 200px;
+    justify-content: center;
+    align-self: center;; /* Space between title and content */
+    white-space: nowrap;
+    position: relative; /* Ensure proper layering */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.animated-text-char {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

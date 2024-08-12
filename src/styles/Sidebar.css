@@ -1,0 +1,64 @@
+/* src/styles/Sidebar.css */
+.sidebar {
+    width: 250px; /* Increased width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    padding: 20px; /* Padding inside the sidebar */
+    position: fixed; /* Fixes the sidebar on the left */
+    top: 0;
+    left: 0;
+    transition: width 0.3s; /* Smooth transition for width changes */
+    border-right: 2px solid #444; /* Subtle border on the right side */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for a lifted effect */
+
+}
+
+.sidebar.closed {
+    width: 80px;
+}
+
+.toggle-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    height: calc(100vh - 600px); /* Adjust height if necessary */
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    text-align: center; /* Center text */
+    font-size: 18px; /* Larger font size for premium look */
+    font-family: 'Roboto', sans-serif; /* Premium font */
+    font-weight: 500; /* Medium weight for better readability */
+    color: #e0e0e0b7; /* Light gray color for text */
+    transition: color 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+    padding-left: 10px; /* Add some space on the left */
+}
+
+.sidebar ul li:hover {
+    color: #ffffff; /* Gold color on hover for a premium look */
+    transform: translateX(10px); /* Slide effect on hover */
+    padding-left: 20px; /* Add extra padding on hover */
+}
+.sidebar a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent element */
+    display: block; /* Make the link block-level to fill the list item */
+}
+
+
+.sidebar.closed ul li {
+    font-size: 16px; /* Adjust font size for smaller sidebar */
+}
